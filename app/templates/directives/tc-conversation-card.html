@@ -1,0 +1,18 @@
+<div class="thumbnial" style="border:1px solid #ddd ">
+	<a ng-href="#/conversation/show/{{id}}">
+		<img ng-src="{{userimage}}" style="padding:9px">
+	</a>
+	<div class="caption" style="padding:9px">
+		<h4>Description:</h4>
+		<p>Originator: @{{screenname}} ID: {{id}}</p>
+		<p Style="height:80px">Content: {{text}}</p>
+		<p style="align:center">
+			<a href="#/conversation/show/{{id}}" class="btn btn-info" role="button">
+				Conversation Detail
+			</a>
+			&nbsp
+			<a target="_blank" href="https://twitter.com/pattonoswalt/status/{{id}}" role="button" class="btn btn-info">Go Twitter</a>
+		</p>
+	</div>
+	
+</div>

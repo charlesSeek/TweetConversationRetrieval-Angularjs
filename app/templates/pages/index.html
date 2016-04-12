@@ -1,0 +1,13 @@
+<div class="contianer" id="home">
+	<div class="row" style="padding-bottom:20px;padding-left:20px;padding-right:20px">
+		<label for="topicInput">Topic Search</label>
+		<input class="form-control" type="text" ng-model="search.key" placeholder="search">
+	</div>
+	<div class="row">
+		<p ng-show="error">There is issue to access topics</p>
+		<div class="col-md-4" ng-repeat="topic in topics|filter:search">
+			<tc-topic-card  topic="{{topic.key}}" value="{{topic.value}}">
+			</tc-topic-card>
+		</div>
+	</div>
+</div>

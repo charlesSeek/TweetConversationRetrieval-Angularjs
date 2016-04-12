@@ -1,0 +1,13 @@
+<div class="container" id="RepliesPage">
+	<div class="row">
+		<div ng-repeat="reply in replies" style="padding:8px">
+			<tc-reply-card
+				screenname="{{reply.value.screen_name}}"
+				userimage="{{reply.value.user_image}}"
+				text ="{{reply.value.text}}"
+				created="{{reply.value.created_at}}">
+			</tc-reply-card>
+		</div>
+	</div>
+	
+</div>

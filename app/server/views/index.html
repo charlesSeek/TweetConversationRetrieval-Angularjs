@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="TweetConversation" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="TweetConversation" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="TweetConversation" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html lang="en" ng-app="TweetConversations">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tweet Conversations</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ruluko" type="text/css">
+
+
+</head>
+<body>
+	<tc-navbar-header></tc-navbar-header>
+	<div ng-view></div>
+	<!-- load js libs-->
+	<script src="/js/vendor/jquery.js"></script>
+	<script src="/js/vendor/bootstrap.js"></script>
+	<script src="/js/vendor/angular.js"></script>
+	<script src="/js/vendor/angular-route.js"></script>
+	<script src="/js/vendor/angular-resource.js"></script>
+
+	<script src="/js/app.js"></script>
+	<script src="/js/routes.js"></script>
+
+	<!--load directive-->
+	<script src="/js/directives/tc-navbar-header.js"></script>
+	<script src="/js/directives/tc-topic-card.js"></script>
+	<script src="/js/directives/tc-conversation-card.js"></script>
+	<script src="/js/directives/tc-reply-card.js"></script>
+	<script src="/js/directives/tc-tr-item.js"></script>
+
+	<!--load controller-->
+	<script src="/js/controllers/AllTopicsController.js"></script>
+	<script src="/js/controllers/AllConversationsByTopicController.js"></script>
+	<script src="/js/controllers/AllRepliesController.js"></script>
+	<script src="/js/controllers/TopicSearchController.js"></script>
+	<script src="/js/controllers/AllConversationsController.js"></script>
+	<script src="/js/controllers/CompletedConversationsController.js"></script>
+	<script src="/js/controllers/ScheduledConverstionsController.js"></script>
+
+	<!--load services-->
+	<script src="/js/services/topic.js"></script>
+	<script src="/js/services/conversation.js"></script>
+	<script src="/js/services/reply.js"></script>
+
+</body>
+</html>

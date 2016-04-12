@@ -1,0 +1,29 @@
+<div class="container" id="TopicSearchPage" >
+	<div class="row">
+		<form name="TopicSearchForm" class="form-horizontal" ng-submit="submit()">
+			<div class="form-group">
+				<div class="col-md-3">
+					<label class="control-label">#Search Topic</label>
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="please input the topic for search" ng-model="search.topic" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-3">
+					<label for="" class="control-label">Max Number Of Conversations</label>
+				</div>
+				<div class="col-md-6">
+					<input type="number" class="form-control" placeholder="please input a number no more than 10" ng-model="search.limits" min=1 max=10 required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-offset-3 col-md-6">
+					<button class="btn btn-default" type="submit">Submit</button>
+					<button class="btn btn-default" ng-click="reset()" >Reset</button>
+				</div>
+			</div>
+			<p></p>
+		</form>
+	</div>
+</div>

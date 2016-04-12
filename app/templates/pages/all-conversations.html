@@ -1,0 +1,31 @@
+<div class="container" id="ConversationListPage">
+	<div class="row">
+		<table class="table table-hover table-bordered">
+			<tr>
+				<th>ID</th>
+				<th>TOPIC</th>
+				<th>TWEET ORIGINATOR</th>
+				<th>CONVERSATION CREATED</th>
+				<th>STATUS</th>
+				<th>DETAIL</th>
+				<th>REPLIES</th>
+				<th>DELETE</th>
+			</tr>
+			<tr ng-repeat="conversation in conversations" id="tr-{{conversation.id}}">
+				<td>{{conversation.id}}</td>
+				<td>{{conversation.value.topic}}</td>
+				<td>@{{conversation.value.screen_name}}</td>
+				<td>{{conversation.value.retrieved_at}}</td>
+				<td>{{conversation.value.status}}</td>
+				<td><a target="_blank" href="#/conversation/show/{{conversation.id}}">Detail</a></td>
+				<td>
+					<button class="btn btn-primary" ng-click="getReplies(conversation.id)" ng-show="conversation.value.status=='completed'">Refresh</button>
+					<button class="btn btn-primary" ng-click="getReplies(conversation.id)" ng-show="conversation.value.status=='schedule'">Get Replies</button>
+				</td>
+				<td>
+					<button class="btn-danger" ng-click="delete(conversation.id)">Delete</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

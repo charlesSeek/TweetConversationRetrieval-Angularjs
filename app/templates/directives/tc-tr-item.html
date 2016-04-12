@@ -1,0 +1,14 @@
+
+	<td>{{id}}</td>
+	<td>{{topic}}</td>
+	<td>@{{originator}}</td>
+	<td>{{created}}</td>
+	<td>{{status}}</td>
+	<td><a target="_blank" href="/conversation/show/{{id}}">Detail</a></td>
+	<td>
+		<button class="btn btn-primary" ng-show="status=='completed'">Refresh</button>
+		<button class="btn btn-primary" ng-show="status=='schedule'">Get Replies</button>
+	</td>
+	<td>
+		<button class="btn-danger">Delete</button>
+	</td>

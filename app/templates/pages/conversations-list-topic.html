@@ -1,0 +1,12 @@
+<div class="container" id="conversationsByTopic">
+	<div class="row">
+		<div class="col-md-4" ng-repeat="conversation in conversations" style="padding-bottom:20px">
+			<tc-conversation-card 
+				screenname="{{conversation.value.screen_name}}"
+				userimage="{{conversation.value.user_image}}" 
+				id="{{conversation.id}}" 
+				text="{{conversation.value.text}}">
+			</tc-conversation-card>
+		</div>
+	</div>
+</div>
